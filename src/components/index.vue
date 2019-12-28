@@ -15,7 +15,7 @@
           tile
           width="344"
         >
-          <v-card-title>Title</v-card-title>
+          <v-card-title>Title text</v-card-title>
           <v-card-text>txt here</v-card-text>
           <v-card-subtitle>fdf ddsf</v-card-subtitle>
         </v-card>
