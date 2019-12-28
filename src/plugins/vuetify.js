@@ -1,0 +1,15 @@
+import Vue from 'vue';
+import Vuetify from 'vuetify/lib';
+
+Vue.use(Vuetify);
+
+export default new Vuetify({
+    iconfont:'md',
+    theme:{
+        primary:'#FFC400',
+        success:'#00E676',
+        info:'#651FFF',
+        error:'#D50000',
+        white:'#FAFAFA',
+    }
+});
