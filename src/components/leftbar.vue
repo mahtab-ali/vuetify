@@ -1,15 +1,15 @@
 <template>
 <v-navigation-drawer v-model="drawer"
-     app class="deep-purple accent-4"
-      dark
-      fixed
+     app 
+     dark
+     fixed
     >
   
       <v-list>
         <v-list-item
           v-for="item in items"
           :key="item.title"
-          link
+          linka4
           :to="item.route"
         >
           <v-list-item-icon>
@@ -37,20 +37,29 @@ export default {
         
         items: [
           { title: 'Dashboard', icon: 'mdi-windows', route: {name: 'dashbaord'} },
-          { title: 'Add Events', icon: 'mdi-account-box', route: {name: 'add-events'}},
-          { title: 'Events', icon: 'mdi-account-box', route:{name: 'events'} },
-          { title: 'Analytics', icon: 'mdi-chart-areaspline', route: '/analytics.vue' },
-          { title: 'On-site User', icon: 'mdi-account-multiple', route:'/on-siteuser'},
-          { title: 'Organization', icon: 'mdi-city', route:'/organization.vue' },
-          { title: 'Organization Guests', icon: 'mdi-account-supervisor-circle', route: '/organization-guests.vue'},
-          { title: 'Exhibotors', icon: 'mdi-account-supervisor', route:'/exhibitors.vue'},
-          { title: 'Messages', icon: 'mdi-comment-text', route:'/messages.vue' },
-          { title: 'Notification', icon: 'mdi-comment-alert', route:'/notifications.vue' },
-          { title: 'Profile', icon: 'mdi-account-circle', route:'/profile.vue' },
-          { title: 'Settings', icon: 'mdi-cogs', route:'/setting.vue'},
+          { title: 'Add Events', icon: 'mdi-account-box', route: {name:'add-events'} },
+          { title: 'Events', icon: 'mdi-account-box', route:{name:'events'} },
+          { title: 'Analytics', icon: 'mdi-chart-areaspline', route: {name:'analytics' } },
+          { title: 'On-site User', icon: 'mdi-account-multiple', route: {name:'on-site_user'} },
+          { title: 'Organization', icon: 'mdi-city', route: {name:'organization'} },
+          { title: 'Organization Guests', icon: 'mdi-account-supervisor-circle', route: {name:'organization-guests'} },
+          { title: 'Exhibotors', icon: 'mdi-account-supervisor', route: {name:'exhibitors'} },
+          { title: 'Messages', icon: 'mdi-comment-text', route: {name:'messages'} },
+          { title: 'Notification', icon: 'mdi-comment-alert', route: {name:'notifications'} },
+          { title: 'Profile', icon: 'mdi-account-circle', route: {name:'profile'} },
+          { title: 'Settings', icon: 'mdi-cogs', route: {name:'setting'} },
         ]
       }
    },
   
 };
 </script>
+
+<style>
+.pa-2{background: #F7C598;
+}
+
+.v-navigation-drawer {
+  background: linear-gradient(45deg, #F7C598,#FF8886);
+}
+</style>

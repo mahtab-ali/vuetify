@@ -28,47 +28,47 @@ export default  ([
             },
             {
                 path      : '/analytics',
-                name      : 'Analytics',
+                name      : 'analytics',
                 component : require('../components/analytics.vue').default
             },
             {
-                path      : '/on-siteuser',
-                name      : 'on-site-user',
-                component : require('../components/on-siteuser.vue').default
+                path      : '/on-site_user',
+                name      : 'on-site_user',
+                component : require('../components/on-site_user.vue').default
             },
             {
                 path      : '/organization',
-                name      : 'Organization',
+                name      : 'organization',
                 component : require('../components/organization.vue').default
             },
             {
                 path      : '/organization-guests',
-                name      : 'Organization-guests',
+                name      : 'organization-guests',
                 component : require('../components/organization-guests.vue').default
             },
             {
                 path      : '/exhibitors',
-                name      : 'Exhibitors',
+                name      : 'exhibitors',
                 component : require('../components/exhibitors.vue').default
             },
             {
                 path      : '/messages',
-                name      : 'Messages',
+                name      : 'messages',
                 component : require('../components/messages.vue').default
             },
             {
                 path      : '/notifications',
-                name      : 'Notifications',
+                name      : 'notifications',
                 component : require('../components/notifications.vue').default
             },
             {
                 path      : '/profile',
-                name      : 'Profile',
+                name      : 'profile',
                 component : require('../components/profile.vue').default
             },
             {
-                path      : '/settings',
-                name      : 'Settings',
+                path      : '/setting',
+                name      : 'setting',
                 component : require('../components/setting.vue').default
             },
             {

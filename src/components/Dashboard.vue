@@ -3,10 +3,6 @@
    <LeftBar :drawer="drawer"></LeftBar> 
     <TopBar v-on:childToParent="onChildClick"></TopBar>
 
-    <v-card
-    height="1000"
-
-  >
     
     <v-app class="grey lighten-4">
 
@@ -15,9 +11,7 @@
       </v-container>
 
     </v-app>
-  
-  </v-card>
-  
+    
  
 </div>
 </template> 
@@ -33,7 +27,7 @@ export default {
   },
   data () {
       return {
-        drawer:true,
+        drawer:false,
       }
    },
   methods: {

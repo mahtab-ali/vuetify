@@ -1,20 +1,19 @@
 <template>
 <v-app-bar
-      color="deep-purple accent-4"
-      dark
       app
     >
-      <v-app-bar-nav-icon @click="emitToParent"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon class="white--text" @click="emitToParent"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Page title</v-toolbar-title>
+      <v-toolbar-title ><span class="text-uppercase white--text font-weight-bold">Attendo</span>
+      <span class="white--text font-weight-light">Plus</span></v-toolbar-title>
 
       <v-spacer></v-spacer>
 
-      <v-btn icon>
+      <v-btn icon class="white--text">
         <v-icon>mdi-heart</v-icon>
       </v-btn>
 
-      <v-btn icon>
+      <v-btn icon class="white--text">
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
 
@@ -24,7 +23,7 @@
       >
         <template v-slot:activator="{ on }">
           <v-btn icon v-on="on">
-            <v-icon>mdi-dots-vertical</v-icon>
+            <v-icon class="white--text">mdi-dots-vertical</v-icon>
           </v-btn>
         </template>
 
@@ -59,3 +58,10 @@ export default {
   }
 }
 </script>
+<style>
+        header{
+         background: linear-gradient(45deg,  #FF8886,#F7C598 );
+        }
+                    
+        
+</style>
