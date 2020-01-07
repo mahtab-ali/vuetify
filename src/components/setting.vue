@@ -1,32 +1,79 @@
 <template>
-<div class="Dashboard">
-    
+<div class="settings">
 
-    
-    <v-app class="grey lighten-4">
+    <h1 class="subheading grey--text">Projects</h1>
 
-      <v-contan class="mx-12 mb-4">
-        <router-view></router-view>
-          
-        <h1 class="subheading grey--text">Settings</h1>
-        <v-container class="my-5">
-          <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.</p>
-          Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.
-        </v-container>
-      </v-contan>
+ <v-col
+        col="12"
+        md="10"
+      >
+      <v-container class="my-6"> 
+        <v-expansion-panels >
+        <v-expansion-panel v-for="project in projects" :key="project.title">
 
-    </v-app> 
+        <v-expansion-panel-header>{{ project.title }}</v-expansion-panel-header>
+
+        
+        <v-expansion-panel-content class="px-4 grey--text"> 
+        <div class="font-weight-bold">
+           {{ project.due }}
+        </div>
+        <div class="light">{{project.person}}
+        </div>
+         <div class="light">{{project.contant}}
+        </div>
+        <div class="light">{{project.status}}
+        </div>
+        <div class="light">{{project.content}}
+        </div>
+      
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+  </v-expansion-panels>
+  </v-container>
+     
+ </v-col>
+
+
+
+   
   </div>
 </template> 
   
 
 <script>
+import db from '@/fb'
+
 export default {
-  name: 'Dashboard',
+  name: 'Settings',
   data () {
       return {
         drawer:false,
+         projects:[
+          ]
       }
+    },
+    computed:{
+      myProject(){
+              return this.projects.filter(project => {
+                return project.person === ''
+              })
+      }
+    },
+     created() {
+      db.collection('projects').onSnapshot(res => {
+        const changes = res.docChanges ();
+
+        changes.forEach(change => {
+          if (change.type === 'added'){
+            this.projects.push({
+              ...change.doc.data(),
+              id: change.doc.id
+
+            })
+          }
+        })
+      })
     },
 };
 </script>

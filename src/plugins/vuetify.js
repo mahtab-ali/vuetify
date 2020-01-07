@@ -10,6 +10,8 @@ export default new Vuetify({
         success:'#00E676',
         info:'#651FFF',
         error:'#D50000',
-        white:'#FAFAFA',
+        white:'#Fff',
+        light:'#FF9190',
+        new:'#33ccdd'
     }
 });

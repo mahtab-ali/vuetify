@@ -4,6 +4,9 @@
      dark
      fixed
     >
+    
+    <v-flex class="mt-4">
+    </v-flex>
   
       <v-list>
         <v-list-item
@@ -30,11 +33,11 @@
     </v-navigation-drawer>
 </template>
 <script>
+
 export default {
     props: ['drawer'],
   data () {
       return {
-        
         items: [
           { title: 'Dashboard', icon: 'mdi-windows', route: {name: 'dashbaord'} },
           { title: 'Add Events', icon: 'mdi-account-box', route: {name:'add-events'} },
@@ -48,9 +51,9 @@ export default {
           { title: 'Notification', icon: 'mdi-comment-alert', route: {name:'notifications'} },
           { title: 'Profile', icon: 'mdi-account-circle', route: {name:'profile'} },
           { title: 'Settings', icon: 'mdi-cogs', route: {name:'setting'} },
-        ]
+        ],
       }
-   },
+   }
   
 };
 </script>

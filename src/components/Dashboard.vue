@@ -11,8 +11,7 @@
       </v-container>
 
     </v-app>
-    
- 
+     
 </div>
 </template> 
   
@@ -37,6 +36,7 @@ export default {
     }
   }
 };
+
 </script>
 
 <style>
